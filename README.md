@@ -1,13 +1,10 @@
 # Custom WAS: Weighted Atom Sampling & Path Processing Engine
 
-[![Rust](https://img.shields.io/badge/rust-2021%20edition-orange.svg)](https://www.rust-lang.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
-
 **Custom WAS** is a high-performance Rust library providing Weighted Atom Sampling (WAS), temperature-scaled random walk trie traversals, path generation sources, and stream aggregation sinks. It is designed to seamlessly integrate with the [MORK](https://github.com/) atom sweep engine and [`pathmap`](https://crates.io/crates/pathmap) prefix trie data structures.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Temperature-Scaled Weighted Sampling (`WeightedSamplingZipper`)**
   - Performs temperature-controlled probabilistic branch selection over `PathMap` trie zippers.
@@ -30,7 +27,7 @@
 
 ---
 
-## 📐 Mathematical Formulation
+## Mathematical Formulation
 
 ### 1. Temperature-Scaled Branch Selection
 For a given trie node with child branches $i \in \{1, \dots, n\}$ and raw branch weights $w_i$, the effective weight $W_{\text{effective}}[i]$ under temperature $T > 0$ is computed as:
@@ -55,7 +52,7 @@ The sink maintains a min-heap priority queue of size $K$ (`max_samples`). Paths 
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 custom_WAS/
@@ -74,7 +71,7 @@ custom_WAS/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -90,7 +87,7 @@ mork_expr = { path = "../mork_expr" }
 
 ---
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### 1. Weighted Random Walk on Trie Zippers
 
@@ -154,7 +151,7 @@ while let Some(node) = dfs.next_path() {
 
 ---
 
-## 🛠️ API Reference
+## 🛠️PI Reference
 
 ### Core Types
 
@@ -171,6 +168,3 @@ while let Some(node) = dfs.next_path() {
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
