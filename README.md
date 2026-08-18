@@ -151,7 +151,7 @@ while let Some(node) = dfs.next_path() {
 
 ---
 
-## 🛠️PI Reference
+##  PI Reference
 
 ### Core Types
 
