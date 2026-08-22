@@ -1,8 +1,10 @@
 //! Sinks for consuming, aggregating, and filtering query result paths.
 
+pub mod astar_sink;
 pub mod count;
 pub mod weighted_sample;
 
+pub use astar_sink::{BestKSink, ScoredPath, ThresholdSink};
 pub use count::CountSink;
 pub use weighted_sample::WeightedSampleSink;
 
